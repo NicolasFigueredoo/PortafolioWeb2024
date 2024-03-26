@@ -68,6 +68,16 @@
 
       <div class="proyectos">
         <div class="proyecto">
+          <img class="imgProyecto" src="../assets/kotex.png" alt="">
+          <p class="nombreProyecto">Simple page Vue + Laravel</p>
+          <div class="botones">
+            <a href="https://tecnolar.me/" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Proyecto</button></a>
+            <a href="https://github.com/NicolasFigueredoo/KotexPrueba" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Codigo</button></a>
+          </div>
+        </div>
+
+
+        <div class="proyecto">
           <img class="imgProyecto" src="../assets/e.commerce.png" alt="">
           <p class="nombreProyecto"> Web ecommerce Nike</p>
           <div class="botones">
