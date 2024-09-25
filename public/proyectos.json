@@ -1,0 +1,68 @@
+[
+    {
+      "nombre": "GUFRA",
+      "imagen": "./imagenes/gufra.jpeg",
+      "urlProyecto": "https://gufra.osole.com.ar/"
+    },
+    {
+      "nombre": "BMH",
+      "imagen": "./imagenes/bmh.jpeg",
+      "urlProyecto": "https://bmh.osole.com.ar/"
+    },
+    {
+      "nombre": "TURUL",
+      "imagen": "./imagenes/turul.jpeg",
+      "urlProyecto": "https://turul.osole.com.ar/"
+    },
+    {
+      "nombre": "RESORTES DAG",
+      "imagen": "./imagenes/dag.jpeg",
+      "urlProyecto": "http://dag-sa.com.ar/"
+    },
+    {
+      "nombre": "IPTSA IndPlastec S.A",
+      "imagen": "./imagenes/iptsa.jpeg",
+      "urlProyecto": "https://iptsa.osole.com.ar/"
+    },
+    {
+      "nombre": "ECOTEMP",
+      "imagen": "./imagenes/ecotemp.jpeg",
+      "urlProyecto": "https://www.ecotemp.com.ar/"
+    },
+    {
+      "nombre": "EL ROBLE SRL",
+      "imagen": "./imagenes/roble.jpeg",
+      "urlProyecto": "https://herramientaselroble.com.ar/"
+    },
+    {
+      "nombre": "OHMMICA",
+      "imagen": "./imagenes/ohmica.jpeg",
+      "urlProyecto": "https://www.ohmmica.com.ar/"
+    },
+    {
+      "nombre": "PRODUCTOS GORRION",
+      "imagen": "./imagenes/gorrion.jpeg",
+      "urlProyecto": "https://gorrion.osole.com.ar/"
+    },
+    {
+      "nombre": "FIBRAS ARGENTINAS",
+      "imagen": "./imagenes/fibras.jpeg",
+      "urlProyecto": "https://www.fibrasargentinas.com.ar/"
+    },
+    {
+      "nombre": "QUIMICA REAL",
+      "imagen": "./imagenes/real.jpeg",
+      "urlProyecto": "https://quimica-real.osole.com.ar/"
+    },
+    {
+      "nombre": "KOTEX",
+      "imagen": "./imagenes/kotex.jpeg",
+      "urlProyecto": "https://kotex.osole.com.ar/#/"
+    }
+
+
+
+    
+
+  ]
+  

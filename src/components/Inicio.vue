@@ -1,6 +1,6 @@
 <template>
 
-  <div class="perfil">
+  <div class="container perfil">
 
 
     <div class="datos">
@@ -38,20 +38,34 @@
 
       <div class="experiencias">
         <p class="titulo">Experiencia</p>
-        <div class="experiencia">
-          <div class="experenciaDate">
-            <a href="https://mlplak.com/wordpress/" target="_blank"><button type="button" class="btn btn-secondary botonIcono"><font-awesome-icon class="icon" icon="fa-solid fa-desktop" /></button></a>
-            <p class="tituloExp">MlPlak</p>
-            <p class="puestoExp">Desarrollador Full Stack</p>
-            <p class="tiempoExp">Noviembre - Abril 2022</p>
-            <a href="https://mlplak.com/wordpress/" target="_blank" style="text-decoration: none;">Ver empresa</a>
+        <div class="row">
+          <div class="col-lg-4 experenciaDate">
+            <div>
+              <a href="https://osole.com.ar/" target="_blank"><button type="button" class="btn btn-secondary botonIcono"><font-awesome-icon class="icon" icon="fa-solid fa-desktop" /></button></a>
+              <p class="tituloExp">OSOLE</p>
+              <p class="tiempoExp">Abril - Actualidad</p>
+              <a href="https://osole.com.ar/" target="_blank" style="text-decoration: none;">Ver empresa</a>
+            </div>
           </div>
-          <div class="experenciaDate">
-            <a href="https://cyberargsistemas.com.ar/" target="_blank"><button type="button" class="btn btn-secondary botonIcono"><font-awesome-icon class="icon" icon="fa-solid fa-desktop" /></button></a>
-            <p class="tituloExp">CyberArg Systemas</p>
-            <p class="puestoExp">Desarrollador Backend</p>
-            <p class="tiempoExp">Abril - Octubre 2023</p>
-            <a href="https://cyberargsistemas.com.ar/" target="_blank" style="text-decoration: none;">Ver empresa</a>
+
+          <div class="col-lg-4 experenciaDate">
+            <div>
+              <a href="https://mlplak.com/wordpress/" target="_blank"><button type="button" class="btn btn-secondary botonIcono"><font-awesome-icon class="icon" icon="fa-solid fa-desktop" /></button></a>
+              <p class="tituloExp">MlPlak</p>
+              <p class="tiempoExp">Noviembre - Abril 2022</p>
+              <a href="https://mlplak.com/wordpress/" target="_blank" style="text-decoration: none;">Ver empresa</a>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 experenciaDate">
+            <div>
+
+              <a href="https://cyberargsistemas.com.ar/" target="_blank"><button type="button" class="btn btn-secondary botonIcono"><font-awesome-icon class="icon" icon="fa-solid fa-desktop" /></button></a>
+              <p class="tituloExp">CyberArg Systemas</p>
+              <p class="tiempoExp">Abril - Octubre 2023</p>
+              <a href="https://cyberargsistemas.com.ar/" target="_blank" style="text-decoration: none;">Ver empresa</a>
+            </div>
 
           </div>
         </div>
@@ -64,93 +78,112 @@
   
 
     <div class="proyectosTerminados">
-      <p>Proyectos</p>
+    <p>Proyectos</p>
 
-      <div class="proyectos">
-        <div class="proyecto">
-          <img class="imgProyecto" src="../assets/kotex.png" alt="">
-          <p class="nombreProyecto">Simple page Vue + Laravel</p>
-          <div class="botones">
-            <a href="https://tecnolar.me/" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Proyecto</button></a>
-            <a href="https://github.com/NicolasFigueredoo/KotexPrueba" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Codigo</button></a>
-          </div>
-        </div>
-
-
-        <div class="proyecto">
-          <img class="imgProyecto" src="../assets/e.commerce.png" alt="">
-          <p class="nombreProyecto"> Web ecommerce Nike</p>
-          <div class="botones">
-            <a href="https://proyectonike.netlify.app/" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Proyecto</button></a>
-            <a href="https://github.com/NicolasFigueredoo/ProyectoTiendaNike" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Codigo</button></a>
-          </div>
-        </div>
-
-        <div class="proyecto">
-          <img class="imgProyecto" src="../assets/tickets.png" alt="">
-          <p class="nombreProyecto"> Web soporte tickets</p>
-          <div class="botones">
-            <a href="https://well-mannered-invoi.000webhostapp.com/" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Proyecto</button></a>
-          </div>
-        </div>
-
-        <div class="proyecto">
-          <img class="imgProyecto" src="../assets/calculadora.png" alt="">
-          <p class="nombreProyecto">Calculadora</p>
-          <div class="botones">
-            <a href="https://calculadoraanimated.netlify.app/" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Proyecto</button></a>
-            <a href="https://github.com/NicolasFigueredoo/ProyectoCalculadora" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Codigo</button></a>
-          </div>
-        </div>
-
-        <div class="proyecto">
-          <img class="imgProyecto" src="../assets/frida.jpeg" alt="">
-          <p class="nombreProyecto">Web estetica systema de turnos</p>
-          <div class="botones">
-            <a href="https://github.com/NicolasFigueredoo/ProyectoTurnosFrida" target="_blank"><button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Codigo</button></a>
-          </div>
-        </div>
-
-
-      </div>
-
+    <div class="proyectos">
+      <div v-for="proyecto in proyectos" :key="proyecto.nombre" class="proyecto">
+        <img class="imgProyecto" :src="proyecto.imagen" :alt="proyecto.nombre">
+        <p class="nombreProyecto">{{ proyecto.nombre }}</p>
+        <div class="botones">
+          <a v-if="proyecto.urlProyecto" :href="proyecto.urlProyecto" target="_blank">
+            <button id="explorarProyectos" type="button" class="btn btn-secondary">Ver Proyecto</button>
+          </a>
      
-      
+        </div>
+      </div>
     </div>
+  </div>
 
     
     
 </div>
 
-<div class="whatsapp-button">
-      <a href="https://wa.me/+541150483561" target="_blank">
-        <button class="btn btn-success botonWhatssap">
-          <font-awesome-icon style="color:white;" icon="fa-brands fa-whatsapp" />
-        </button>
+<div class="whatsapp-container">
+      <a href="https://wa.me/+541150483561" class="whatsapp-btn" target="_blank">
+      <img class='img-fluid' src="imagenes/wp-logo.png" alt="WhatsApp">
       </a>
-  </div>
+    </div>
 </template>
 
 
 <script>
-
 export default {
   name: 'InicioPage',
+  data() {
+    return {
+      proyectos: []
+    };
+  },
   methods: {
-      abrirCorreo() {
-          const destinatario = 'nicofigueredo02@outlook.com';
-          const asunto = 'Portafolio';
-          const cuerpo = 'Hola buenas me comunico desde la web';
-
-          const enlaceCorreo = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-
-          window.location.href = enlaceCorreo;
+    async cargarProyectos() {
+      try {
+        const response = await fetch('/proyectos.json');  // Asegúrate de que la ruta sea correcta
+        const data = await response.json();
+        this.proyectos = data;
+      } catch (error) {
+        console.error('Error al cargar los proyectos:', error);
       }
+    },
+    abrirCorreo() {
+      const destinatario = 'nicofigueredo02@outlook.com';
+      const asunto = 'Portafolio';
+      const cuerpo = 'Hola buenas me comunico desde la web';
+      const enlaceCorreo = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+      window.location.href = enlaceCorreo;
+    }
+  },
+  mounted() {
+    this.cargarProyectos();
   }
 }
 </script>
 
 <style scoped>
+
+.whatsapp-btn img {
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+}
+
+.whatsapp-container {
+position: fixed;
+bottom: 55px;
+right: 33px;
+z-index: 99;
+}
+
+.whatsapp-btn {
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  width: 70px;
+  height: 70px;
+  background-color: #22BE4A;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* .whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+} */
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+
 .perfil {
 margin-left: 200px;
 margin-top: 50px;
@@ -294,7 +327,6 @@ justify-content: center;
 align-items: center;
 font-size: 15px;
 font-weight: 600;
-margin-left: 30px;
 }
 
 .tituloExp{

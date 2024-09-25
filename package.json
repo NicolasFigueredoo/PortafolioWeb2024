@@ -16,8 +16,11 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
+    "jquery": "^3.7.1",
+    "slick-carousel": "^1.8.1",
     "vue": "^3.2.13",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
